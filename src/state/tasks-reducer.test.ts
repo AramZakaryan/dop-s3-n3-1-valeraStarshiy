@@ -18,6 +18,8 @@ beforeEach(() => {
     };
 });
 
+
+
 test('correct task should be deleted from correct array', () => {
     const action = removeTaskAC("2", "todolistId2");
 
@@ -27,6 +29,7 @@ test('correct task should be deleted from correct array', () => {
     expect(endState["todolistId2"].length).toBe(2);
     expect(endState["todolistId2"].every(t => t.id != "2")).toBeTruthy();
 });
+
 test('correct task should be added to correct array', () => {
     const action = addTaskAC("juce", "todolistId2");
 
